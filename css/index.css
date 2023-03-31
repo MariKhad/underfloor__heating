@@ -1,0 +1,40 @@
+@import '/css/normalize.css';
+@import '/css/swiper-bundle.min.css';
+@import '/css/fonts.css';
+@import '/css/default.css';
+@import '/css/header.css';
+@import '/css/hero.css';
+@import '/css/advantage.css';
+@import '/css/calc.css';
+@import '/css/footer.css';
+@import '/css/modal.css';
+
+:root {
+	--width-slide: 590px;
+	--gap: 10px;
+	--width-block: calc(50% - var(--gap)/2);
+	--padding: 50px;
+}
+
+@media(max-width: 1240px) {
+	:root {
+		--width-slide: 440px;
+		--padding: 30px;
+	}
+}
+
+@media(max-width: 920px) {
+	:root {
+		--width-slide: 311px;
+		--padding: 24px;
+		--gap: 8px;
+	}
+}
+
+@media(max-width: 560px) {
+	:root {
+		--width-slide: 308px;
+		--padding: 20px;
+		--gap: 4px
+	}
+}

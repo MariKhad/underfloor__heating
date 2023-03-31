@@ -1,0 +1,306 @@
+.calc__container {
+	display: flex;
+	gap: var(--gap);
+}
+
+.calc__content {
+	width: var(--width-block)
+}
+
+.calc__title {
+	margin-bottom: 32px;
+}
+
+.calc__fieldset-size {
+	display: flex;
+	margin-bottom: 32px;
+}
+
+.calc__wrapper--input_size {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 10px;
+	flex-basis: 50%;
+}
+
+.calc__wrapper--input_size:last-child {
+	margin-right: 0px;
+}
+
+.calc__text {
+	font-size: 12px;
+	color: #898989;
+	margin-bottom: 2px;
+}
+
+.calc__input-number {
+	background-color: #FFFFFF;
+	border: 1px solid #E4E4E4;
+	border-radius: 12px;
+	color: #232020;
+	line-height: 150%;
+	font-weight: 400;
+	width: 240px;
+	height: 54px;
+	padding: 0px 25px;
+	outline: 0;
+}
+
+.calc__input-number::-webkit-inner-spin-button {
+	display: none;
+}
+
+.calc__input-number:hover,
+.calc__input-number:focus {
+	border-color: #FFC700;
+}
+
+.calc__wrapper--input_tarif {
+	margin-right: 16px;
+}
+
+.calc__wrapper--input_tarif:last-child {
+	margin-right: 0;
+}
+
+.calc__fieldset-tarif {
+	margin-bottom: 65px;
+}
+
+.calc__text-legend {
+	margin-bottom: 15px;
+}
+
+.calc__input-radio {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	margin-right: 8px;
+	outline-color: #FFC700;
+}
+
+.calc__input-radio:before {
+	content: '';
+	position: absolute;
+	cursor: pointer;
+	inset: 0;
+	background-color: #FFFFFF;
+	border: 1px solid #E4E4E4;
+	border-radius: 50%;
+}
+
+.calc__input-radio:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	transform: translate(-50%, -50%);
+	background-color: #232020;
+	border-radius: 50%;
+	opacity: 0;
+
+}
+
+.calc__input-radio:checked::after {
+	opacity: 1;
+}
+
+
+.calc__label-radio {
+	text-transform: uppercase;
+}
+
+
+.calc__total {
+	width: var(--width-block);
+	display: flex;
+	align-items: flex-end;
+	padding: var(--padding);
+	background: #aaa url(../images/calc__image.avif);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 12px;
+
+}
+
+.calc__result-wrapper {
+	opacity: 0;
+	flex-basis: 303px;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	padding: 24px;
+	transition: opacity 0.3s;
+}
+
+.calc__result-wrapper_show {
+	opacity: 1;
+}
+
+.calc__order {
+	display: none;
+}
+
+.calc__order_show {
+	display: inline-block;
+}
+
+
+
+.calc__result {
+	margin-bottom: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 0;
+	gap: 20px;
+}
+
+.calc__result:last-child {
+	margin-bottom: 0;
+}
+
+
+
+
+@media(max-width: 1240px) {
+	.calc__title {
+		margin-bottom: 24px;
+	}
+
+	.calc__fieldset-size {
+		margin-bottom: 24px;
+	}
+
+	.calc__fieldset-tarif {
+		margin-bottom: 34px;
+	}
+
+	.calc__input-number {
+		width: 185px;
+	}
+}
+
+@media(max-width: 920px) {
+	.calc {
+		--width-block: 100%;
+	}
+
+	.calc__container {
+		width: var(--width-block);
+		flex-direction: column;
+	}
+
+	.calc__fieldset-tarif {
+
+		margin-bottom: 36px;
+	}
+
+	.calc__text-legend {
+		margin-bottom: 8px;
+	}
+
+	.calc__input-number {
+		width: 100%;
+		height: 36px;
+	}
+
+	.calc__input-number {
+		width: 100%;
+		height: 36px;
+	}
+
+	.calc__wrapper--input {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	.calc__wrapper--input:last-child {
+		margin-bottom: 0;
+	}
+
+	.calc__wrapper--input_tarif {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+
+	}
+
+	.calc__label-radio {
+		font-size: 14px;
+		padding: 0 16px;
+	}
+
+	.calc__total {
+		width: 100%;
+		min-height: 220px;
+		align-items: flex-start;
+		background-position: 50% 75%;
+	}
+
+
+}
+
+@media(max-width: 560px) {
+	.calc__title {
+		margin-bottom: 16px;
+	}
+
+	.calc__fieldset-size {
+		flex-direction: column;
+		margin-bottom: 16px;
+	}
+
+	.calc__wrapper--input_size {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.calc__wrapper--input_size:last-child {
+		margin-bottom: 0;
+	}
+
+	.calc__fieldset-tarif {
+		margin-bottom: 24px;
+	}
+
+	.calc__wrapper--input_tarif {
+		display: flex;
+		margin-bottom: 8px;
+		margin-right: 0;
+	}
+
+	.calc__result-wrapper {
+		width: auto;
+		padding: 16px;
+	}
+
+	.calc__total {
+		min-height: 128px;
+	}
+
+	.calc__result {
+		margin-bottom: 8px;
+	}
+
+
+	.calc__result {
+		gap: 10px;
+	}
+}
+
+@media(max-width: 459px) {
+	.calc__fieldset-tarif {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.calc__result {
+		gap: 8px;
+	}
+}
